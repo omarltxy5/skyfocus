@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.leaflet-container {
+  background: #0a1628;
+  font-family: inherit;
+}
+
+.skyfocus-tooltip {
+  background: rgba(15, 33, 55, 0.95) !important;
+  border: 1px solid #1a3352 !important;
+  color: #e2e8f0 !important;
+  font-size: 11px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.skyfocus-tooltip::before {
+  border-top-color: #1a3352 !important;
+}
+
+@keyframes go-around-pulse {
+  0%,
+  100% {
+    background-color: rgba(239, 68, 68, 0.15);
+  }
+  50% {
+    background-color: rgba(239, 68, 68, 0.35);
+  }
+}
+
+.go-around-row {
+  animation: go-around-pulse 1s ease-in-out infinite;
+}
+
+.airport-popup-wrap .leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #e2e8f0;
+}
+
+.airport-popup-wrap .leaflet-popup-content-wrapper {
+  background: rgba(15, 33, 55, 0.96);
+  border: 1px solid #1a3352;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.airport-popup-wrap .leaflet-popup-tip {
+  background: rgba(15, 33, 55, 0.96);
+}
+
+.airport-popup .ap-muted {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.airport-popup .ap-mono {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  color: #7dd3fc;
+}
+
+.airport-popup .ap-metar {
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 6px;
+  word-break: break-word;
+}
+
+.plane-icon-wrap {
+  background: transparent !important;
+  border: none !important;
+}
+
+.plane-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+.go-around-plane .plane-marker {
+  filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.9));
+}
+
+.sky-popup-wrap .leaflet-popup-content-wrapper,
+.airport-popup-wrap .leaflet-popup-content-wrapper {
+  background: rgba(15, 33, 55, 0.96);
+  border: 1px solid #1a3352;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  color: #e2e8f0;
+}
+
+.sky-popup-wrap .leaflet-popup-content,
+.airport-popup-wrap .leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.sky-popup-wrap .leaflet-popup-tip,
+.airport-popup-wrap .leaflet-popup-tip {
+  background: rgba(15, 33, 55, 0.96);
+}
+
+.sky-popup .popup-photo {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.sky-popup .popup-muted,
+.sky-popup .popup-mono {
+  color: #94a3b8;
+  font-size: 11px;
+  margin: 4px 0;
+}
+
+.sky-popup .popup-mono {
+  font-family: ui-monospace, monospace;
+  color: #7dd3fc;
+}
+
+.sky-popup .popup-metar {
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  color: #94a3b8;
+  word-break: break-word;
+  margin-top: 6px;
+}
+
+.sky-popup .popup-route {
+  color: #bae6fd;
+  font-size: 11px;
+}
+
+.sky-popup .popup-error {
+  color: #fca5a5;
+  font-size: 11px;
+}
+
+.metar-explainer {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #1a3352;
+}
+
+.metar-explainer .explainer-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7dd3fc;
+  margin-bottom: 6px;
+}
+
+.metar-explainer .explainer-list {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11px;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.popup-metar-raw {
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  color: #94a3b8;
+  word-break: break-word;
+  margin: 6px 0;
+}
+
+.metar-cat {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.cat-vfr {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+.cat-mvfr {
+  background: #78350f;
+  color: #fcd34d;
+}
+.cat-ifr {
+  background: #7c2d12;
+  color: #fdba74;
+}
+.cat-lifr {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
